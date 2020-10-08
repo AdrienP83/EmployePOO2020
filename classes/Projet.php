@@ -26,7 +26,7 @@ class Projet {
         $this->nomProjet = $nomProjet;
         $this->dureePrevu = $dureePrevu;
     }
-    function getCodeProjet () : int {
+    function getCodeProjet () : string {
         return $this->codeProjet;
     }
     function getNomProjet () : string{
@@ -37,6 +37,9 @@ class Projet {
     }
     function setDureePrevu(int $dureePrevu) :void{
         $this->dureePrevu = $dureePrevu;
+    }
+    public function __toString() : string {
+        return "Projet : ".  $this->getCodeProjet() . " - " .$this->getNomProjet() . " - " .$this->getDureePrevu();
     }
         
 }

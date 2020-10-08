@@ -8,6 +8,7 @@
 
 include 'classes/employe.php';
 include 'includes/Traitement.php';
+include 'classes/Projet.php';
 
 try{
     //Traitement ::instanciationUnEmploye(); //appele de la fonction instanciationUnEmploye qui renvoie l'employe créer
