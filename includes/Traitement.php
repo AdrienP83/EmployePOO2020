@@ -15,6 +15,6 @@ class Traitement {
     public static function instanciationUnEmploye () : void{
         $e = new Employe (1,"Dupont","Jacques",new DateTime("12/07/1980"),1000.00);
         $nom = $e ->getNom();
-        echo "L'employe instancié s'appelle" . $nom;
+        echo "L'employé instanciÃ© s'appelle " . $nom;
     }
 }

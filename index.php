@@ -6,3 +6,11 @@
  * and open the template in the editor.
  */
 
+include 'classes/employe.php';
+include 'includes/Traitement.php';
+
+try{
+    Traitement ::instanciationUnEmploye();
+} catch (Exception $ex) {
+    echo $ex ->getMessage();
+}
