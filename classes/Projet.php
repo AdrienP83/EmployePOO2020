@@ -36,6 +36,7 @@ class Projet {
         return $this->dureePrevu;
     }
     function setDureePrevu(int $dureePrevu) :void{
-        $this->codeProjet = $dureePrevu;
+        $this->dureePrevu = $dureePrevu;
     }
+        
 }

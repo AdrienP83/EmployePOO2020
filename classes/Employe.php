@@ -17,8 +17,8 @@ class Employe {
     protected string $prenom;
     protected DateTime $dateDeNaissance;
     protected float $salaireM;
-   private const MINSALAIRE = 1000;
-    
+    private const MINSALAIRE = 1000; 
+      
     /**
      * Constructeur de la classe Employe
      * @param int $numero
