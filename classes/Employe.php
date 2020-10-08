@@ -17,6 +17,7 @@ class Employe {
     protected string $prenom;
     protected DateTime $dateDeNaissance;
     protected float $salaireM;
+   private const MINSALAIRE = 1000;
     
     /**
      * Constructeur de la classe Employe
@@ -31,7 +32,7 @@ class Employe {
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateDeNaissance = $dateDeNaissance;
-        $this->salaireM = $salaireM;
+        $this->setSalaireM($salaireM);
     }
     function getNumero(): int {
         return $this->numero;
@@ -54,7 +55,12 @@ class Employe {
     }
 
     function setSalaireM(float $salaireM): void {
-        $this->salaireM = $salaireM;
+        if($salaireM >= self::MINSALAIRE){
+            $this->salaireM = $salaireM;
+        }
+        else{
+            throw new Exception("le salaire ne doit pas être inférieur à ".self::MINSALAIRE);
+        }
     }
     public function __toString() : string {
         return $this->numero . " - " .$this->getNom() . " - " .$this->getPrenom(). " - "

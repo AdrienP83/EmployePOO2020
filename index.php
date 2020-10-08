@@ -11,6 +11,9 @@ include 'includes/Traitement.php';
 
 try{
     Traitement ::instanciationUnEmploye();
+    Traitement :: instanciationEmployeErreur();
+    Traitement ::instanciationUnEmploye();
+    
 } catch (Exception $ex) {
     echo $ex ->getMessage();
 }
