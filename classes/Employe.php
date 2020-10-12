@@ -12,7 +12,7 @@
  * @author adrien.poignard
  */
 class Employe {
-    protected  int $numero;
+    protected int $numero;
     protected string $nom;
     protected string $prenom;
     protected DateTime $dateDeNaissance;
@@ -63,7 +63,7 @@ class Employe {
         }
     }
     public function __toString() : string {
-        return $this->numero . " - " .$this->getNom() . " - " .$this->getPrenom(). " - "
+        return $this->getNumero(). " - " .$this->getNom() . " - " .$this->getPrenom(). " - "
                 .$this ->dateDeNaissance->format('d/m/Y') . " - ". $this->getSalaireM();
     }
 

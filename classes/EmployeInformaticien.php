@@ -11,7 +11,7 @@
  *
  * @author adrien.poignard
  */
-class EmployeInformaticien extends Employe{
+class EmployeInformaticien extends Employe{ //hérite de la classe employe
     private int $primeM;
     private Projet $sonProjet;
     /**
@@ -21,16 +21,10 @@ class EmployeInformaticien extends Employe{
      * @param string $prenom
      * @param DateTime $dateDeNaissance
      * @param float $salaireM
-     * @param type $PrimeM
      */
-    function __construct (int $numero, string $nom, string $prenom, DateTime $dateDeNaissance, float $salaireM,$primeM, Projet $sonProjet){
+    function __construct (int $numero, string $nom, string $prenom, DateTime $dateDeNaissance, float $salaireM, Projet $sonProjet){
     parent::__construct($numero, $nom, $prenom, $dateDeNaissance, $salaireM);
-    if ($primeM === 0){
-        $this ->primeM = $primeM;
-    }
-    else {
-        throw new Exception("La prime doit être initialisée à 0");
-    }
+    $this->primeM = 0; //la prime est valorisée à 0 lors de la déclaration d'un informaticien
     $this->sonProjet = $sonProjet;
     }
     /*
@@ -45,7 +39,7 @@ class EmployeInformaticien extends Employe{
     }
     
     function setPrimeM(int $primeM): void {
-        if($primeM <= (parent::salaireM*0.8)){ // prime doit être inférieur à 30ù du salaire
+        if($primeM <= (parent::salaireM*0.8)){ // prime doit être inférieur à 30% du salaire
             $this->primeM = $primeM;
         }
         else{
